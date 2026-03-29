@@ -55,6 +55,19 @@ cover/
 *.mo
 *.pot
 
+# Node
+node_modules/
+dist/
+.env.local
+
+# Docker
+*.log
+
+# IDEs
+.vscode/
+.idea/
+*.DS_Store
+
 # Django stuff:
 *.log
 local_settings.py
