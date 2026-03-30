@@ -21,6 +21,6 @@ class UserResponse(BaseModel):
         from_attributes = True
         
 class Token(BaseModel):
-    acess_token: str
+    access_token: str
     token_type: str = "bearer"
-    user: UserResponse
+    user: UserResponse # Retorna os dados do usuário junto com o token

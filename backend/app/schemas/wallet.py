@@ -11,7 +11,7 @@ class WalletUpdate(BaseModel):
     name: str | None = None
     balance: Decimal | None = None
     
-class WalletResponde(BaseModel):
+class WalletResponse(BaseModel):
     id: UUID
     name: str
     balance: Decimal
