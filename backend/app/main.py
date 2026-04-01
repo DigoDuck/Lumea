@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from app.routers import auth, wallets, transactions, ai
 
 app = FastAPI(
     title="Lumea API",
@@ -14,6 +15,11 @@ app.add_middleware(
     allow_methods=["*"], 
     allow_headers=["*"], # Permite qualquer header
 )
+
+app.include_router(auth.router)
+app.include_router(wallets.router)
+app.include_router(transactions.router)
+app.include_router(ai.router)
 
 @app.get("/health", tags=["Health"]) 
 async def health_check():
