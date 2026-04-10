@@ -1,4 +1,4 @@
-export default function KpiCard({ title, value, change, icon: accent }) {
+export default function KpiCard({ title, value, change, Icon: accent }) {
   const isPositive = change >= 0;
 
   return (
@@ -16,7 +16,7 @@ export default function KpiCard({ title, value, change, icon: accent }) {
       <p className="text-2xl font-bold text-black">{value}</p>
       {change !== undefined && (
         <p
-          className={`text-xs font-medium flex items-center gap-1 ${isPositive} ? "text-emerald-400" : "text-red-500"`}
+          className={`text-xs font-medium flex items-center gap-1 ${isPositive ? "text-emerald-400" : "text-red-500"}`}
         >
           {isPositive ? "▲" : "▼"} {Math.abs(change).toFixed(1)}% vs. mês
           anterior
