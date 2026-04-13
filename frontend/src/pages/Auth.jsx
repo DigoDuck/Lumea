@@ -65,7 +65,6 @@ export default function Auth() {
 
   return (
     <div className="min-h-screen bg-[url('/bg_lumea.png')] bg-cover bg-center bg-no-repeat flex items-center justify-center p-4">
-
       <div className="w-full max-w-md">
         {/* Header */}
         <div className="text-center mb-8">
@@ -118,7 +117,7 @@ export default function Auth() {
                 {...register("email")}
                 className="bg-black/5 border-black/10 text-black placeholder:text-black/50 focus-visible:ring-violet-500 pr-10"
               />
-              {errors.name && (
+              {errors.email && (
                 <p className="text-red-500 text-xs mt-1">
                   {errors.email.message}
                 </p>
@@ -129,6 +128,7 @@ export default function Auth() {
               <Input
                 type={showPass ? "text" : "password"}
                 placeholder="Senha"
+                {...register("confirmPassword")}
                 className="bg-black/5 border-black/10 text-black placeholder:text-black/50 focus-visible:ring-violet-500 pr-10"
               />
               <button
