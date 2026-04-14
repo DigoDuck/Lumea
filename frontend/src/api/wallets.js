@@ -1,6 +1,6 @@
 import api from "./axios";
 
-export const walletApi = {
+export const walletsApi = {
   list: () => api.get("/wallets/"),
   create: (data) => api.post("/wallets/", data),
   update: (id, data) => api.put(`/wallets/${id}`, data),

@@ -128,7 +128,7 @@ export default function Auth() {
               <Input
                 type={showPass ? "text" : "password"}
                 placeholder="Senha"
-                {...register("confirmPassword")}
+                {...register("password")}
                 className="bg-black/5 border-black/10 text-black placeholder:text-black/50 focus-visible:ring-violet-500 pr-10"
               />
               <button
