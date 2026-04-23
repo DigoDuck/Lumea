@@ -163,7 +163,7 @@ export default function AIAnalyst() {
             </Button>
           </div>
           <p className="text-xs text-black/40 text-center mt-2">
-            Lumea AI lê seus financeiros para respostas personalizadas
+            Lumea AI lê seus dados financeiros para respostas personalizadas
           </p>
         </div>
       </div>
