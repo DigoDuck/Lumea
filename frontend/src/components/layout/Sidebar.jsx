@@ -5,6 +5,7 @@ import {
   Wallet,
   FileText,
   BrainCircuit,
+  MoonStar,
   Settings,
   LogOut,
 } from "lucide-react";
@@ -31,7 +32,7 @@ export default function Sidebar() {
       {/* Logo */}
       <div className="flex items-center gap-3 mb-10 px-2">
         <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-violet-600 to-violet-900 flex items-center justify-center shadow-md shadow-violet-900/20">
-          <BrainCircuit size={18} className="text-white" />
+          <MoonStar size={18} className="text-white" />
         </div>
         <div>
           <p className="font-bold text-zinc-900 leading-none">Lumea</p>
