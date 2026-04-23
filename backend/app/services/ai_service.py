@@ -8,7 +8,7 @@ from app.config import get_settings
 
 settings = get_settings()
 genai.configure(api_key=settings.gemini_api_key)
-model = genai.GenerativeModel("gemini-1.5-flash")
+model = genai.GenerativeModel("models/gemini-2.5-flash")
 
 async def _get_user_financial_summary(user_id: str) -> dict:
     async with AsyncSessionLocal() as db:

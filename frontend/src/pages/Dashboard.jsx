@@ -175,19 +175,19 @@ export default function Dashboard() {
               <LineChart data={cashFlowData}>
                 <XAxis
                   dataKey="month"
-                  stroke="#FFFFFF20"
-                  tick={{ fill: "#FFFFFF50", fontSize: 12 }}
+                  stroke="#00000020"
+                  tick={{ fill: "#00000060", fontSize: 12 }}
                 />
                 <YAxis
-                  stroke="#FFFFFF20"
-                  tick={{ fill: "#FFFFFF50", fontSize: 12 }}
+                  stroke="#00000020"
+                  tick={{ fill: "#00000060", fontSize: 12 }}
                 />
                 <Tooltip
                   contentStyle={{
-                    backgound: "#1A1A2E",
-                    border: "1px solid #FFFFFF15",
+                    background: "#fff",
+                    border: "1px solid #00000015",
                     borderRadius: 12,
-                    color: "#FFF",
+                    color: "#000",
                   }}
                 />
                 <Line

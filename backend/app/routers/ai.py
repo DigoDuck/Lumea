@@ -15,11 +15,19 @@ class ChatMessage(BaseModel):
     session_id: str | None = None
     
 @router.get("/insight")
-async def get_dashboard_insigth(current_user: User = Depends(get_current_user)): # Retorna insight do mês atual (com cache do Mongo DB)
-    now = datetime.now(timezone.utc)
-    insight = await get_or_generate_insight(str(current_user.id), now.month, now.year)
-    return insight
-
+async def get_dashboard_insight(current_user: User = Depends(get_current_user)):
+    try:
+        now = datetime.now(timezone.utc)
+        insight = await get_or_generate_insight(str(current_user.id), now.month, now.year)
+        return insight
+    except Exception as e:
+        return {
+            "score": None,
+            "summary_text": "",
+            "suggested_action": None,
+            "error": "IA temporariamente indisponível"
+        }
+        
 @router.post("/chat")
 async def chat(payload: ChatMessage, current_user: User = Depends(get_current_user)): # Chat com o Gemini que lê os dados financeiros do usuário
     session_id = payload.session_id or str(uuid4())
